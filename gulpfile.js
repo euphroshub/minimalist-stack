@@ -18,7 +18,7 @@ const gulpEsbuild = require('gulp-esbuild')
 // Used to access files currently in gulp's stream
 const buffer = require('vinyl-buffer');
 
-// used to create a local server
+// Used to create a local server
 const http = require('http');
 const st = require('st');
 
@@ -40,7 +40,6 @@ return del('dist/**/*');
 // compiling style.scss and all .scss files in the components directory
 // each file will be outputed as a css file
 // perfect for your components
-
 function styles() {
 return src(['./app/scss/style.scss', './app/scss/components/**/*.scss'])
     .pipe(sass())
@@ -56,7 +55,6 @@ return src(['./app/scss/style.scss', './app/scss/components/**/*.scss'])
 }
 
 // used to transpile the main app script
-
 function app() {
 
 return src('./app/js/app.js')
@@ -191,7 +189,6 @@ exports.html = html
 exports.styles = styles
 exports.app = app
 exports.components = components
-
 
 // exporting main tasks
 // execute "gulp [taskname]" in your terminal
