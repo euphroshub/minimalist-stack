@@ -3,7 +3,7 @@
 // -------------------------------------------------------
 @each $name, $value in $theme-colors {
 	.BlockColor--#{$name} {
-		background: variable('#{$name}');
+		background: var(--#{$name});
 	}
 
 	.BlockBodyColor--#{$name} {
@@ -13,7 +13,7 @@
 
 @each $name, $value in $theme-monochromes {
 	.BlockColor--#{$name} {
-		background: variable('#{$name}');
+		background: var(--#{$name});
 	}
 
 	.BlockBodyColor--#{$name} {
@@ -27,7 +27,7 @@
 
 @each $name, $value, $code in $theme-colors {
 	.Color--#{$name} {
-		color: variable('#{$name}');
+		color: var(--#{$name});
 	}
 
 	.BodyColor--#{$name} {
@@ -45,7 +45,7 @@
 
 @each $name, $value in $theme-monochromes {
 	.Color--#{$name} {
-		color: variable('#{$name}');
+		color: var(--#{$name});
 	}
 
 	.BodyColor--#{$name} {

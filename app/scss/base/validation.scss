@@ -8,17 +8,17 @@
 	text-align: center;
 
 	&.has-success {
-		background: variable('success');
+		background: var(--success);
 		color: darken($success, 55%);
 	}
 
 	&.has-warning {
-		background: variable('warning');
+		background: var(--warning);
 		color: darken($warning, 55%);
 	}
 
 	&.has-error {
-		background: variable('error');
+		background: var(--error);
 		color: darken($error, 55%);
 	}
 }

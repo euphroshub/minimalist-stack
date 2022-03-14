@@ -71,7 +71,7 @@ ul ol {
 }
 
 dt {
-  font-weight: variable('font-bold');
+  font-weight: var(--font-bold);
 }
 
 dd {

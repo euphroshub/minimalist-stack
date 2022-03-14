@@ -45,8 +45,8 @@
 	background: none;
 	border: none;
 	display: block;
-	padding: variable('input-padding') variable('input-padding') variable('input-padding') 0;
-	color: variable('primary');
+	padding: var(--input-padding) var(--input-padding) var(--input-padding) 0;
+	color: var(--primary);
 	outline: none;
 	width: 100%;
 }
@@ -71,7 +71,7 @@
 			position: absolute;
 			top: 0;
 			border-radius: 2px;
-			border: 1px solid variable('primary');
+			border: 1px solid var(--primary);
 			background: transparent;
 			width: 20px;
 			height: 20px; 
@@ -87,7 +87,7 @@
 
 		label {
 			position: absolute;
-			top: variable('label-padding');
+			top: var(--label-padding);
 			left: 0;
 			@include fsize(16);
 			transition: all 0.2s $decel-curve;
@@ -105,7 +105,7 @@
 		&.is-white {
 			&.is-up {
 				label {
-					color: variable('white');
+					color: var(--white);
 				}
 			}
 		}

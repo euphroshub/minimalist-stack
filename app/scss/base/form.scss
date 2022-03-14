@@ -8,10 +8,10 @@ label, .Label {
 .c-FormElement {
 	--form-element-margin: 30px;
 	--form-element-padding: 15px;
-	// @include input-placeholder(variable('font-base'), variable('font-base'), variable('gray'));
-	margin-bottom: variable('form-element-margin');
+	// @include input-placeholder(var(--font-base), var(--font-base), var(--gray));
+	margin-bottom: var(--form-element-margin);
 	line-height: 1.2;
-	color: variable('primary');
+	color: var(--primary);
 
 	input {
 		@include input-reset();
@@ -19,7 +19,7 @@ label, .Label {
 
 	&--label {
 		font-family: inherit;
-		color: variable('primary');
+		color: var(--primary);
 		@include fsize(16);
 		margin-bottom: 1.2em;
 	}
@@ -43,10 +43,10 @@ label, .Label {
 	&--bordered {
 		position: relative;
 		background: transparent;
-		outline: 1px solid variable('primary');
+		outline: 1px solid var(--primary);
 
 		textarea:focus ~ .c-FormElement--focusLine {
-			border-color: variable('black');
+			border-color: var(--black);
 		}
 	}
 
@@ -66,7 +66,7 @@ label, .Label {
 			width: 100%;
 			margin: 0;
 			height: 1px;
-			background: variable('primary');
+			background: var(--primary);
 		}
 
 		.c-FormElement--focusLine {
@@ -77,7 +77,7 @@ label, .Label {
 			border: none;
 			width: 0%;
 			height: 1px;
-			background: variable('black');
+			background: var(--black);
 			transition: all .35s $ease-in;
 		}
 
@@ -120,8 +120,8 @@ label, .Label {
 		// Checked state 
 		:checked + label {
 			&::before {
-				background: variable('primary');
-				border-color: variable('primary');
+				background: var(--primary);
+				border-color: var(--primary);
 			}
 		}
 	}
@@ -157,14 +157,14 @@ label, .Label {
 		input ~ label svg {
 			width: 20px;
 			height: 20px; 
-			border: 1px solid variable('primary');
+			border: 1px solid var(--primary);
 			margin-right: 14px;
 		}
 
 		input ~ label svg path {
 			transition: stroke-dashoffset .3s $ease-in;
 			fill: none;
-			stroke: variable('primary');
+			stroke: var(--primary);
 			stroke-dasharray: 270;
 			stroke-dashoffset: 270;
 			stroke-width: 5px;
@@ -183,7 +183,7 @@ label, .Label {
 				right: 0;
 				transform: translate3d(0, -50%, 0);
 				width: 18px;
-				fill: variable('primary');
+				fill: var(--primary);
 				pointer-events: none;
 			}
 
@@ -192,9 +192,9 @@ label, .Label {
 				background: transparent;
 				border-radius: 0;
 				border: none;
-				font-size: variable('font-base');
-				color: variable('primary');
-				padding: variable('form-element-padding') calc(var(--form-element-padding) + 2em) variable('form-element-padding') 0;
+				font-size: var(--font-base);
+				color: var(--primary);
+				padding: var(--form-element-padding) calc(var(--form-element-padding) + 2em) var(--form-element-padding) 0;
 				outline: none;
 				width: 100%;
 
@@ -210,7 +210,7 @@ label, .Label {
 				width: 100%;
 				margin: 0;
 				height: 1px;
-				background: variable('primary');
+				background: var(--primary);
 			}
 
 			.c-FormElement--focusLine {
@@ -221,7 +221,7 @@ label, .Label {
 				border: none;
 				width: 0%;
 				height: 1px;
-				background: variable('black');
+				background: var(--black);
 				transition: all .35s $ease-in;
 			}
 
@@ -238,15 +238,15 @@ label, .Label {
 
 			position: relative;
 			display: inline-block;
-            border: 1px solid variable('primary');
+            border: 1px solid var(--primary);
 
 			svg {
 				position: absolute;
 				top: 50%;
-				fill: variable('primary');
+				fill: var(--primary);
 				pointer-events: none;
 				top: 50%;
-				right: variable('svg-right-value');
+				right: var(--svg-right-value);
 				transform: translate3d(0, -50%, 0);
 				width: 14px;
 			}
@@ -256,12 +256,12 @@ label, .Label {
 				appearance: none;
 				background: transparent;
 				border-radius: 0;
-				font-family: variable('font-secondary');
+				font-family: var(--font-secondary);
 				text-transform: uppercase;
-				font-size: variable('font-base');
+				font-size: var(--font-base);
 				letter-spacing: 1.6px;
-				color: variable('primary');
-				padding: variable('form-element-padding') calc(var(--form-element-padding) + 2em) variable('form-element-padding') 0;
+				color: var(--primary);
+				padding: var(--form-element-padding) calc(var(--form-element-padding) + 2em) var(--form-element-padding) 0;
 				line-height: 1.2;
 				padding: 13px 35px;
 				padding-right: calc(var(--padding-right-value) + var(--padding-right-initial));
@@ -285,7 +285,7 @@ label, .Label {
 
 		&--updated {
 			select {
-				color: variable('primary');
+				color: var(--primary);
 			}
 		}
 	}
@@ -315,7 +315,7 @@ label, .Label {
 				right: -5px;
 				transform: translate3d(0, -50%, 0) rotate(-90deg);
 				width: 24px;
-				fill: variable('primary');
+				fill: var(--primary);
 				pointer-events: none;
 			}
 
@@ -327,8 +327,8 @@ label, .Label {
 				background: none;
 				border: none;
 				margin: 0 !important;
-				color: variable('primary');
-				padding: variable('form-element-padding') variable('label-padding') variable('form-element-padding') 0;
+				color: var(--primary);
+				padding: var(--form-element-padding) var(--label-padding) var(--form-element-padding) 0;
 				width: 100%;
 				min-height: 49.19px;
 			}
@@ -340,7 +340,7 @@ label, .Label {
 				width: 100%;
 				margin: 0;
 				height: 1px;
-				background: variable('primary');
+				background: var(--primary);
 			}
 
 			.c-FormElement--focusLine {
@@ -351,7 +351,7 @@ label, .Label {
 				border: none;
 				width: 0%;
 				height: 1px;
-				background: variable('black');
+				background: var(--black);
 				transition: all .35s $ease-in;
 			}
 
@@ -379,10 +379,10 @@ label, .Label {
 					right: 0;
 					bottom: 0;
 					pointer-events: none;
-					padding: variable('btn-padding-tb') variable('btn-padding-lr');
-					color: variable('white');
+					padding: var(--btn-padding-tb) var(--btn-padding-lr);
+					color: var(--white);
 					@include fsize(16);
-					background: variable('primary')
+					background: var(--primary)
 				}
 			}
 		}
@@ -396,12 +396,12 @@ label, .Label {
 		textarea {
 			background: none;
 			border: none;
-			font-size: variable('font-base');
-			color: variable('primary');
+			font-size: var(--font-base);
+			color: var(--primary);
 			height: auto;
 			max-width: 100%;
-			min-height: variable('textarea-min-height');
-			padding: variable('form-element-padding');
+			min-height: var(--textarea-min-height);
+			padding: var(--form-element-padding);
 			outline: none;
 			line-height: 1.4;
 			width: 100%;
@@ -453,7 +453,6 @@ label, .Label {
 		line-height: 1.6;
 
 		&--bordered {
-	
 			textarea {
 				line-height: inherit;
 			}	

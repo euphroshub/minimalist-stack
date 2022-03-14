@@ -14,8 +14,8 @@
 	}
 
 	--body-text-color: #{$body-text-color};
-	--body-link-color: #{variable('primary')};
-	--body-heading-color: #{variable('body-text-color')};
+	--body-link-color: #{var(--primary)};
+	--body-heading-color: #{var(--body-text-color)};
 	--body-bg-color: #{$body-bg-color};
 
 	// Typography

@@ -22,7 +22,7 @@
 // -------------------------------------------------------
 .container {
 	@include make-container();
-	max-width: variable('container');
+	max-width: var(--container);
 }
 
 // **---------------------------------------------------**

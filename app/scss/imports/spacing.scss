@@ -22,16 +22,16 @@
 //  based on the spacing values set in _variable.scss
 // -------------------------------------------------------
 .Spacing--responsive {
-	padding-top: variable('spacing-responsive');
-	padding-bottom: variable('spacing-responsive');
+	padding-top: var(--spacing-responsive);
+	padding-bottom: var(--spacing-responsive);
 
 	&--noTop {
 		padding-top: 0;
-		padding-bottom: variable('spacing-responsive');
+		padding-bottom: var(--spacing-responsive);
 	}
 
 	&--noBottom {
-		padding-top: variable('spacing-responsive');
+		padding-top: var(--spacing-responsive);
 		padding-bottom: 0;
 	}
 }

@@ -5,8 +5,8 @@
 @mixin make-container() {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: variable('grid-gutter-width');
-	padding-right: variable('grid-gutter-width');
+	padding-left: var(--grid-gutter-width);
+	padding-right: var(--grid-gutter-width);
 	width: 100%;
 }
 
@@ -25,8 +25,8 @@
 	// always setting `width: 100%;`. This works because we use `flex` values
 	// later on to override this initial width.
 	min-height: 1px; // Prevent collapsing
-	padding-left: variable('grid-gutter-width');
-	padding-right: variable('grid-gutter-width');
+	padding-left: var(--grid-gutter-width);
+	padding-right: var(--grid-gutter-width);
 	width: 100%;
 }
 
