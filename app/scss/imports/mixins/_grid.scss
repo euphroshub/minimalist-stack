@@ -1,84 +1,39 @@
-:root {
-	--grid-columns: #{$grid-columns};
-	--grid-gutter-width: #{$grid-gutter-width};
-	--breakpoint: 100%;
-	--breakpoint-max: #{$src-max};
-
-	@each $breakpoint, $value in $breakpoints {
-		@if $value > $bp-class-generation {
-			@include mediaq('>#{$value}') {
-				--breakpoint: #{$value};
-				--container: calc(var(--breakpoint) - (var(--grid-gutter-width) / 2));
-			}
-		}
-	}
-	
-    // Half container
-	--half-container: calc(((100vw - var(--container)) / 2) + ( var(--grid-gutter-width)));
-}
-
-
-
+@use 'sass:math';
 // **---------------------------------------------------**
 //  Container
 // -------------------------------------------------------
-.container {
-	@include make-container();
-	max-width: variable('container');
+@mixin make-container() {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: variable('grid-gutter-width');
+	padding-right: variable('grid-gutter-width');
+	width: 100%;
 }
 
 // **---------------------------------------------------**
-//  Row
+//  Grid utility
 // -------------------------------------------------------
-.row {
-	@include make-row();
+@mixin make-row() {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: calc(-1 * var(--grid-gutter-width));
+	margin-left: calc(-1 * var(--grid-gutter-width));
 }
 
-.no-gutters {
-	margin-left: 0;
-	margin-right: 0;
-
-	> .col,
-	> [class*="col-"] {
-		padding-left: 0;
-		padding-right: 0;
-	}
+@mixin make-col-ready() {
+	// Prevent columns from becoming too narrow when at smaller grid tiers by
+	// always setting `width: 100%;`. This works because we use `flex` values
+	// later on to override this initial width.
+	min-height: 1px; // Prevent collapsing
+	padding-left: variable('grid-gutter-width');
+	padding-right: variable('grid-gutter-width');
+	width: 100%;
 }
 
-
-// **---------------------------------------------------**
-//  Columns
-// -------------------------------------------------------
-@for $i from 1 through $grid-columns {
-	.col-#{$i} {
-		@include make-col-ready();
-		@include make-col($i, $columns: $grid-columns);
-	}
-}
-
-@each $breakpoint, $value in $breakpoints {
-	.col-#{$breakpoint} {
-		@include make-col-ready();
-	}
-
-	@for $i from 1 through $grid-columns {
-		.col-#{$breakpoint}-#{$i} {
-			@include make-col-ready();
-		}
-	}
-
-	@include mediaq('>#{$value}') {
-		.col-#{$breakpoint} {
-			@include make-col-ready();
-			flex-basis: 0;
-			flex-grow: 1;
-			max-width: 100%;
-		}
-
-		@for $i from 1 through $grid-columns {
-			.col-#{$breakpoint}-#{$i} {
-				@include make-col($i, $columns: $grid-columns);
-			}
-		}
-	}
+@mixin make-col($size, $columns: $grid-columns) {
+	flex: 0 0 percentage(math.div($size, $columns));
+	// Add a `max-width` to ensure content within each column does not blow out
+	// the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+	// do not appear to require this.
+	max-width: percentage(math.div($size, $columns));
 }
