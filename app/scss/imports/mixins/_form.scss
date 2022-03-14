@@ -89,7 +89,7 @@
 			position: absolute;
 			top: variable('label-padding');
 			left: 0;
-			@include rem(16);
+			@include fsize(16);
 			transition: all 0.2s $decel-curve;
 			pointer-events: none;
 			margin: 0;
@@ -97,7 +97,7 @@
 
 		&.is-up {
 			label {
-				@include rem(10);
+				@include fsize(10);
 				top: calc((var(--label-padding) + 5px) * -1);
 			}
 		}
@@ -110,4 +110,15 @@
 			}
 		}
 	}
+}
+
+@mixin visually-hidden() {
+	position: absolute;
+	margin: -1px;
+	padding: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
 }

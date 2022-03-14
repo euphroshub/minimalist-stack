@@ -81,6 +81,7 @@ $font-regular: 400;
 $font-medium: 500;
 $font-semi-bold: 600;
 $font-bold: 700;
+$font-extra-bold: 800;
 $font-black: 900;
 
 // **---------------------------------------------------**
@@ -124,17 +125,9 @@ $src-max: 1920px;
 // Spacing utilities
 // -------------------------------------------------------
 // Spacing responsive
-$spacing-initial: 65px;
+$spacing-initial: 70px;
 $spacing-ratio: 1.5;
-$spacing-increment: 10px;
-
-// Margin
-$margin-initial: 10px;
-$margin-ratio: 1;
-
-// Padding
-$padding-initial: 10px;
-$padding-ratio: 1.1;
+$spacing-increment: 15px;
 
 // **---------------------------------------------------**
 // Transitions

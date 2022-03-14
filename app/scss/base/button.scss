@@ -1,0 +1,73 @@
+@import '../variables', '../config', '../imports/mixin.scss';
+
+.Btn {
+	@include make-button();
+
+	&:hover, &:active, &:focus {
+		background: variable('primary');
+		border: 1px solid variable('primary');
+		color: variable('white');
+	}
+
+	&--secondary {
+		@include make-button();
+		border: 1px solid variable('white');
+		color: variable('white');
+
+		&:hover, &:active, &:focus {
+			background: variable('green-light');
+			border: 1px solid variable('green-light');
+			color: variable('gray-600');
+		}
+	}
+
+	&--icon {
+        --padding-right-initial: 35px;
+        --padding-right-value: 18px;
+        --svg-right-value: 20px;
+
+		position: relative;
+		@include fsize(16);
+		@include make-button();
+		font-family: variable('font-secondary');
+		font-weight: variable('font-regular');
+		letter-spacing: 1.6px;
+        padding-right: calc(var(--padding-right-value) + var(--padding-right-initial));
+
+		svg {
+			position: absolute;
+			top: 50%;
+            right: variable('svg-right-value');
+			transform: translate3d(0, -50%, 0);
+			width: 14px;
+			transition: all $ease-in .35s;
+			
+			path {
+				stroke: variable('primary');
+				transition: all $ease-in .3s;
+			}
+		}
+
+		&:hover, &:active, &:focus {
+			background: variable('primary');
+            border: 1px solid variable('primary');
+            color: variable('white');
+
+			svg {
+				path {
+					stroke: variable('white');
+				}
+			}
+		}
+
+        // **---------------------------------------------------**
+        // MEDIA QUERIES
+        
+        @include mediaq('>XLG') {
+            --padding-right-initial: 43px;
+            --svg-right-value: 27px;
+
+            padding-right: calc(var(--padding-right-value) + var(--padding-right-initial));
+        }
+	}
+}
