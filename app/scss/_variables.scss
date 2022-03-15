@@ -1,14 +1,14 @@
 // **---------------------------------------------------**
 //  BEGIN Colors
 // -------------------------------------------------------
-$green: #6C6F2A !default;
-$beige: #F1EFE9 !default;
+$red: #d61313 !default;
+$grey: #4a4545 !default;
 // Add your other colors here.
 
 // **---------------------------------------------------**
 //  Primary Color
 // -------------------------------------------------------
-$primary: $green;
+$primary: $red;
 $primary-lighter: lighten($primary, 16%);
 $primary-light: lighten($primary, 8%);
 $primary-dark: darken($primary, 8%);
@@ -17,7 +17,7 @@ $primary-darker: darken($primary, 16%);
 // **---------------------------------------------------**
 // Secondary Color
 // -------------------------------------------------------
-$secondary: $beige;
+$secondary: $grey;
 $secondary-lighter: lighten($secondary, 16%);
 $secondary-light: lighten($secondary, 8%);
 $secondary-dark: darken($secondary, 8%);
@@ -45,8 +45,8 @@ $mono-front: $gray-900 !default;
 // **---------------------------------------------------**
 // Specific color
 // -------------------------------------------------------
-$body-text-color: $gray-600;
-$body-bg-color: $beige;
+$body-text-color: $grey;
+$body-bg-color: $white;
 
 $success: #48C774 !default;
 $info: #3298DC !default;
