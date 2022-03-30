@@ -9,46 +9,46 @@
 
 	&.has-success {
 		background: var(--success);
-		color: darken($success, 55%);
+		color: darken($success, 60%);
 	}
 
 	&.has-warning {
 		background: var(--warning);
-		color: darken($warning, 55%);
+		color: darken($warning, 60%);
 	}
 
 	&.has-error {
 		background: var(--error);
-		color: darken($error, 55%);
+		color: darken($error, 60%);
 	}
 }
 
 .has-error , .has-error  + label {  
-	color: darken($error, 35%);
+	color: darken($error, 40%);
 }
 
 .has-error {
 	&.c-FormElement {
-		color: darken($error, 35%);
+		color: darken($error, 40%);
 	}  
 }
 
 .has-warning, .has-warning + label {  
-	color: darken($warning, 40%); 
+	color: darken($warning, 45%); 
 }
 
 .has-warning {
 	&.c-FormElement {
-		color: darken($warning, 40%); 
+		color: darken($warning, 45%); 
 	}  
 }
 
 .has-success, .has-success + label{
-	color: darken($success, 35%); 
+	color: darken($success, 40%); 
 }
 
 .has-success {
 	&.c-FormElement {
-		color: darken($success, 35%); 
+		color: darken($success, 40%); 
 	}  
 }
