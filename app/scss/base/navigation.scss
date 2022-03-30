@@ -3,7 +3,8 @@
 // -------------------------------------------------------
 
 .c-Nav {
-
+    overflow-x: hidden;
+    
     &__wrapper {
         display: flex;
         flex-direction: column;
