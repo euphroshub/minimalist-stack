@@ -15,9 +15,9 @@
 		color: var(--white);
 
 		&:hover, &:active, &:focus {
-			background: var(--green-light);
-			border: 1px solid var(--green-light);
-			color: var(--gray-600);
+			background: transparent;
+			border: 1px solid var(--primary);
+			color: var(--secondary);
 		}
 	}
 
