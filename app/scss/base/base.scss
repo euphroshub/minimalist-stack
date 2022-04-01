@@ -22,16 +22,7 @@
 	--font-base: #{$font-base};
 	--font-base-unit: #{$font-base-unit};
 	--font-line-height: #{$font-line-height};
-	--heading-line-height: #{$heading-line-height};
-
-	// Heading
-	--h1: #{$h1};
-	--h2: #{$h2};
-	--h3: #{$h3};
-	--h4: #{$h4};
-	--h5: #{$h5};
-	--h6: #{$h6};
-
+	
 	// Font Families
 	--font-primary: #{$font-primary};
 	--font-secondary: #{$font-secondary};
@@ -46,7 +37,16 @@
     --font-extra-bold: #{$font-extra-bold};
 	--font-black: #{$font-black};
 
-	--font-heading: #{$font-heading};
+    // Heading
+	--h1: #{$h1};
+	--h2: #{$h2};
+	--h3: #{$h3};
+	--h4: #{$h4};
+	--h5: #{$h5};
+	--h6: #{$h6};
+
+    --heading-line-height: #{$heading-line-height};
+    --font-heading: #{$font-heading};
 	--font-heading-weight: #{$font-heading-weight};
 	--font-heading-color: #{$font-heading-color};
 
