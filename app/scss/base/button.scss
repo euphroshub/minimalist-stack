@@ -7,17 +7,18 @@
 		background: var(--primary);
 		border: 1px solid var(--primary);
 		color: var(--white);
+        transition: all $ease-in .3s;
 	}
 
 	&--secondary {
 		@include make-button();
-		border: 1px solid var(--white);
-		color: var(--white);
+		border: 1px solid var(--secondary);
+		color: var(--primary);
+        transition: all $ease-in .3s;
 
 		&:hover, &:active, &:focus {
-			background: transparent;
-			border: 1px solid var(--primary);
-			color: var(--secondary);
+			background: var(--secondary);
+			color: var(--white);
 		}
 	}
 
@@ -40,7 +41,7 @@
             right: var(--svg-right-value);
 			transform: translate3d(0, -50%, 0);
 			width: 14px;
-			transition: all $ease-in .35s;
+			transition: all $ease-in .3s;
 			
 			path {
 				stroke: var(--primary);

@@ -43,9 +43,25 @@
 	margin: 0;
 }
 
+.Margin--top--small {
+    margin-top: 15px;
+}
+
+.Margin--bottom--small {
+    margin-bottom: 15px;
+}
+
 // **---------------------------------------------------**
 //  Padding utilities
 // -------------------------------------------------------
- .Padding--none {
+.Padding--none {
     padding: 0;
+}
+
+.Padding--top--small {
+    padding-bottom: 15px;
+}
+
+.Padding--bottom--small {
+    padding-bottom: 15px;
 }
